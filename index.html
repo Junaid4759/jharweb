@@ -1,0 +1,482 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* default css start */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0px;
+        }
+        
+        @media screen and (min-width: 540px) and (max-width: 767px) {
+            body {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                margin: 0 12%;
+                /* Example: Center content horizontally */
+            }
+            /* Add other CSS styles specific to medium-sized screens here */
+        }
+        
+        @media screen and (min-width: 767px) {
+            body {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                margin: 0% 20%;
+            }
+        }
+        
+        .container-junaid {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header-area-junaid {
+            background: white;
+            background-position: center center;
+            background-size: cover;
+        }
+        /* default css end */
+        /* navbar regular css start */
+        
+        .navbar-area-junaid {
+            background: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid #ffffff;
+        }
+        
+        .site-navbar-junaid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        a.site-logo-junaid {
+            font-size: 26px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #0a0a0a;
+            text-decoration: none;
+        }
+        
+        .site-navbar-junaid ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        
+        .site-navbar-junaid ul li a {
+            color: #000000;
+            padding: 20px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .site-navbar-junaid ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        /* navbar regular css end */
+        /* nav-toggler css start */
+        
+        .nav-toggler-junaid {
+            border: 3px solid #ffffff;
+            padding: 5px;
+            background-color: white;
+            cursor: pointer;
+            height: 39px;
+            display: none;
+        }
+        
+        .nav-toggler-junaid span,
+        .nav-toggler-junaid span:before,
+        .nav-toggler-junaid span:after {
+            width: 28px;
+            height: 3px;
+            background-color: #000000;
+            display: block;
+            transition: .3s;
+        }
+        
+        .nav-toggler-junaid span:before {
+            content: '';
+            transform: translateY(-9px);
+        }
+        
+        .nav-toggler-junaid span:after {
+            content: '';
+            transform: translateY(6px);
+        }
+        
+        .nav-toggler.toggler-open span {
+            background-color: transparent;
+        }
+        
+        .nav-toggler-junaid.toggler-open span:before {
+            transform: translateY(0px) rotate(45deg);
+        }
+        
+        .nav-toggler-junaid.toggler-open span:after {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+        /* nav-toggler css start */
+        /* intro-area css start */
+        
+        .intro-area {
+            height: calc(100vh - 61px);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .intro-area h2 {
+            font-size: 50px;
+            font-weight: 300;
+            line-height: 50px;
+            margin-bottom: 25px;
+        }
+        
+        .intro-area p {
+            font-size: 18px;
+        }
+        /* intro-area css end */
+        /* mobile breakpoint start */
+        
+        @media screen and (max-width: 767px) {
+            .container-junaid {
+                max-width: 720px;
+            }
+            /* navbar css for mobile start */
+            .nav-toggler-junaid {
+                display: block;
+            }
+            .site-navbar-junaid {
+                min-height: 60px;
+                position: relative;
+                z-index: 1;
+            }
+            .site-navbar-junaid ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 60px);
+                left: 0;
+                top: 60px;
+                flex-direction: column;
+                align-items: center;
+                border-top: 1px solid #ffffff;
+                background-color: rgba(255, 255, 255, 0.75);
+                max-height: 0;
+                overflow: hidden;
+                transition: .3s;
+            }
+            .site-navbar-junaid ul li {
+                width: 100%;
+                text-align: center;
+            }
+            .site-navbar-junaid ul li a {
+                padding: 25px;
+            }
+            .site-navbar-junaid ul li a:hover {
+                background-color: rgba(0, 0, 0, 0.452);
+            }
+            .site-navbar-junaid ul.open {
+                max-height: 100vh;
+                overflow: visible;
+            }
+            .intro-area-junaid h2 {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+            /* navbar css for mobile end */
+        }
+        /* mobile breakpoint end */
+        
+        .headline {
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #005A9C;
+            font-size: 21px;
+            color: white;
+            min-height: 130px;
+            padding: 0px 60px;
+            display: flex;
+            margin: 0px 5px 5px 5px;
+        }
+        
+        #dynamic-content {
+            color: rgb(255, 255, 255);
+            /* Set the color for the dynamic content */
+        }
+        
+        .container {
+            width: 97%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1px 3px;
+            margin: -70px 10px 10px 6px;
+            box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
+        }
+        
+        .list {
+            list-style-type: none;
+            padding: 10px;
+            padding-bottom: 15px;
+            margin: 5px;
+        }
+        
+        .list-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            margin-left: -12px;
+        }
+        
+        .list li {
+            display: flex;
+            color: white;
+            width: 95%;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            margin-right: 10px;
+            margin: 0.5em;
+            margin-bottom: 7px;
+            padding: 5px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border-radius: 3px;
+            border-right: 1px solid #fdfafa;
+            border-bottom: 1px solid hsl(0, 100%, 99%);
+            box-shadow: 2px 3px 12px 0 rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+        }
+        
+        .list-item-1 {
+            background: linear-gradient(to right, #000066 0%, #6666ff 100%);
+        }
+        
+        .list-item-2 {
+            background: linear-gradient(to right, #000066 0%, #ff99cc 100%);
+        }
+        
+        .list-item-3 {
+            background: linear-gradient(to right, #000066 0%, #33cccc 100%);
+        }
+        
+        .list-item-4 {
+            background: linear-gradient(to right, #000099 0%, #9966ff 100%);
+        }
+        
+        .list-item-5 {
+            background: linear-gradient(to right, #0000cc 0%, #66ccff 100%);
+        }
+        
+        .list-item-6 {
+            background: linear-gradient(to left, #0000ff 0%, #000066 100%);
+        }
+        
+        .list-item-7 {
+            background: linear-gradient(to right, #000066 0%, #006666 100%);
+        }
+        
+        .list-item-8 {
+            background: linear-gradient(to right, #000066 0%, #9900ff 100%);
+        }
+        
+        .list-item-9 {
+            background: linear-gradient(to right, #000066 0%, #3399ff 100%);
+        }
+        
+        .list-item-10 {
+            background: linear-gradient(to right, #0000ff 0%, #6600cc 100%);
+        }
+        
+        .link-text {
+            margin-top: 15px;
+        }
+        
+        .link-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .headline p {
+            margin-top: 5px;
+        }
+        
+        .link-text a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile responsiveness */
+        
+        @media only screen and (max-width: 768px) {
+            .body {
+                margin: 10px;
+            }
+            .headline {
+                font-size: 20px;
+                padding: 10px;
+                display: flex;
+                margin: 0px 5px 5px 5px;
+            }
+            .list {
+                margin-left: -11px;
+            }
+            .list li {
+                font-size: 18px;
+                padding: 8px;
+                padding-left: 18px;
+                margin: 10px;
+                margin-right: 10px;
+                margin-bottom: 3px;
+            }
+            .list-icon {
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+                margin-left: -8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-area-junaid">
+        <!-- site-navbar start -->
+        <div class="navbar-area-junaid">
+            <div class="container-junaid">
+                <nav class="site-navbar-junaid">
+                    <!-- site logo -->
+                    <a href="#home" class="site-logo-junaid">logo</a>
+
+                    <!-- site menu/nav -->
+                    <ul style="background: white;">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">service</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler-junaid">
+                <span></span>
+              </button>
+                </nav>
+            </div>
+        </div>
+        <!-- navbar-area end -->
+
+        <div class="headline" id="headline">
+            <p>Jharkhand #1 for <span id="dynamic-content">JOB UPDATES</span></p>
+        </div>
+        <div class="container">
+            <ul class="list">
+                <li class="list-item-1">
+                    <img class="list-icon" src="https://jharnet.com/wp-content/uploads/2022/07/Jharkhand-Logo.png" alt="Image 1"> Jharkhand Teacher Vacancy 2023 [26000 Post]
+                </li>
+                <li class="list-item-2">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 2
+                </li>
+                <li class="list-item-3">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 3
+                </li>
+                <li class="list-item-4">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 4
+                </li>
+                <li class="list-item-5">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 5
+                </li>
+                <li class="list-item-6">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 6
+                </li>
+                <li class="list-item-7">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 7
+                </li>
+                <li class="list-item-8">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 8
+                </li>
+                <li class="list-item-9">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 9
+                </li>
+                <li class="list-item-10">
+                    <img class="list-icon" src="image_url_1.png" alt="Image 1"> List Item 10
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        // define all UI variable
+        const navToggler = document.querySelector('.nav-toggler-junaid');
+        const navMenu = document.querySelector('.site-navbar-junaid ul');
+        const navLinks = document.querySelectorAll('.site-navbar-junaid a');
+
+        // load all event listners
+        allEventListners();
+
+        // functions of all event listners
+        function allEventListners() {
+            // toggler icon click event
+            navToggler.addEventListener('click', togglerClick);
+            // nav links click event
+            navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+        }
+
+        // togglerClick function
+        function togglerClick() {
+            navToggler.classList.toggle('toggler-open');
+            navMenu.classList.toggle('open');
+        }
+
+        // navLinkClick function
+        function navLinkClick() {
+            if (navMenu.classList.contains('open')) {
+                navToggler.click();
+            }
+        }
+    </script>
+
+    <script>
+        const dynamicContent = ["JOB UPDATES", "INTERNSHIP", "RESULTS", "ADMIT CARD"];
+        let currentIndex = 0;
+
+        function updateDynamicContent() {
+            const dynamicContentElement = document.getElementById('dynamic-content');
+            dynamicContentElement.textContent = dynamicContent[currentIndex];
+            currentIndex = (currentIndex + 1) % dynamicContent.length;
+        }
+
+        setInterval(updateDynamicContent, 1000);
+    </script>
+</body>
+
+</html>
